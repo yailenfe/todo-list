@@ -6,13 +6,13 @@ export default function UserList() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    fetch("https://jsonplaceholder.typicode.com/users")
+    fetch("http://localhost:3004/users")
       .then((res) => res.json())
       .then((res) => {
         setUsers(res);
         setLoading(false);
       });
-  });
+  }, []);
 
   if (loading) {
     return <span>Loading ......</span>;
@@ -20,9 +20,9 @@ export default function UserList() {
 
 
   return (
-    <div class="list-group">
+    <div className="list-group">
       {users.map((user) => (
-        <UserListItem  user={user} />
+        <UserListItem  user={user} key={user.id} />
       ))}
     </div>
   );
