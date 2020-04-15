@@ -7,7 +7,7 @@ function Routes() {
   return (
     <Router>
       <div className="container">
-        <div className="row">
+        <div className="row m-3">
           <div className="col-md-4  d-none d-md-block">
             <UserList />
           </div>

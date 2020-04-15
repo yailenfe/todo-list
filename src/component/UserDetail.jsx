@@ -1,5 +1,4 @@
 import React from "react";
-import UserListItem from "./UserListItem";
 import TodoList from "./TodoList";
 
 export default function UserDetail() {

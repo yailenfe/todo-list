@@ -1,11 +1,11 @@
 import React from "react";
-import {Link} from "react-router-dom";
+import { Link } from "react-router-dom";
 
-export default function UserListItem() {
+export default function UserListItem(props) {
   return (
     <>
-      <Link to="/user/1/todos"  class="list-group-item list-group-item-action ">
-        Juan
+      <Link to={"/user/"+props.user.id +"/todos"} class="list-group-item list-group-item-action p-3">
+        {props.user.name}
       </Link>
     </>
   );
