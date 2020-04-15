@@ -12,7 +12,7 @@ function Routes() {
             <UserList />
           </div>
           <div className="col-md-8 col-sm-12 ">
-            <Route exact path="/user/:id/todos" component={UserDetail} />
+            <Route exact path="/user/:id" component={UserDetail} />
           </div>
         </div>
       </div>
