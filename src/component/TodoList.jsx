@@ -8,8 +8,13 @@ export default function TodoList(props) {
             <ul className="list-group ">
                 <li className={`list-group-item bg-${type} text-white pr-5`}>
                     {title}{" "}
-                    <span class="badge badge-light badge-pill  ml-4">{todos.length}</span>
+                    <span class="badge badge-light badge-pill  ml-4">
+                        {todos.length}
+                    </span>
                 </li>
+                {todos.length === 0 && (
+                    <li className="list-group-item text-secondary">No Task</li>
+                )}
                 {todos.map((todo) => {
                     return <TodoLisItem title={todo.title} />;
                 })}

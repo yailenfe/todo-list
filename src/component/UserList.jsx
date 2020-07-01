@@ -33,6 +33,9 @@ export default function UserList(props) {
                     {filteredUsers.length}
                 </span>
             </a>
+            {filteredUsers.length === 0 &&  (
+                <li className="list-group-item text-secondary" >No users</li>
+            )}
             {filteredUsers.map((user) => (
                 <UserListItem user={user} key={user.id} />
             ))}
